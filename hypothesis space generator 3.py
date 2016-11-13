@@ -1,6 +1,6 @@
 ###########################
 
-# uses itertools to produce all the combinations of a list of arbitrary size (e.g., ordered combos). 
+# uses itertools to produce all the combinations of a list of arbitrary size (e.g., ordered combos).
 # Each hypothesis is also assigned an 'AND' or 'OR' element.
 
 ###########################
@@ -11,7 +11,7 @@ import itertools
 hypothesis_list = ['A', 'B', 'C']
 
 
-def combo_function(hypothesis_space):
+def combo_AND_OR_function(hypothesis_space):
     hypothesis_space = []
     for i in range(0, len(hypothesis_list)+1):
         for j in itertools.combinations(hypothesis_list, i):
@@ -28,4 +28,4 @@ def combo_function(hypothesis_space):
 
 
 
-combo_function(hypothesis_list)
+combo_AND_OR_function(hypothesis_list)
