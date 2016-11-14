@@ -6,15 +6,14 @@
 
 import itertools
 
-hypothesis_list = ['A', 'B', 'C', 'D', 'E']
+hypothesis_list = ['A', 'B', 'C']
 
 def perm_function(hypothesis_space):
     hypothesis_space = []
     for i in range(0, len(hypothesis_list)+1):
         for j in itertools.permutations(hypothesis_list, i):
-            print(list(j))
             hypothesis_space.append(list(j))
-    print("hypothesis space = {}".format(hypothesis_space))
+    return hypothesis_space
 
 
-perm_function(hypothesis_list)
+print(perm_function(hypothesis_list))

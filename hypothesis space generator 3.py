@@ -16,16 +16,14 @@ def combo_AND_OR_function(hypothesis_space):
     for i in range(0, len(hypothesis_list)+1):
         for j in itertools.combinations(hypothesis_list, i):
             if len(j) <= 1:
-                print(list(j))
                 hypothesis_space.append(list(j))
             elif len(j) > 1: # and counter == 1:
                 x = [list(j) + ['AND']]
                 y = [list(j) + ['OR']]
-                print(x, y)
                 hypothesis_space.append(x)
                 hypothesis_space.append(y)
-    print("hypothesis space = {}".format(hypothesis_space))
+    return hypothesis_space
 
 
 
-combo_AND_OR_function(hypothesis_list)
+print(combo_AND_OR_function(hypothesis_list))
