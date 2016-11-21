@@ -24,6 +24,3 @@ def combo_AND_OR_function(hypothesis_space):
                 hypothesis_space.append(y)
     return hypothesis_space
 
-
-
-print(combo_AND_OR_function(hypothesis_list))
