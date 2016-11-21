@@ -6,6 +6,6 @@ HypothesisTester.py: tests to see if my hypothesis generators are working as pla
 
 ActionSpaceGenerator.py – Generates the list of actions a teacher could take (e.g., just an ordered list of hypotheses)
 
-Simplest action value function.py – first function that produces an action value (the simplest one Julian & I talked about). 
+Simplest action value function.py – first function that produces an action value (the simplest one we talked about). 
 
 
