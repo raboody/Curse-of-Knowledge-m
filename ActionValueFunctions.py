@@ -90,15 +90,18 @@ def medium_ordered_value_function(action_list, outcome_list, hypothesis_space):
                     hypothesis_space.remove(list(x))
             elif len(x) > 1 and len(x) < len(machine_blocks):
                 a = list(x) + ['AND']
+                b = list(x) + ['OR']
                 if a in hypothesis_space:
-                    hypothesis_space.remove(a)                   
+                    hypothesis_space.remove(a)
+                if b in hypothesis_space:
+                    hypothesis_space.remove(b)
             elif len(x) == len(machine_blocks):
                 a = list(x) + ['AND']
                 b = list(x) + ['OR']
                 if a in hypothesis_space:
-                    hypothesis_space.remove(list(a))
+                    hypothesis_space.remove(a)
                 if b in hypothesis_space:
-                    hypothesis_space.remove(list(b))
+                    hypothesis_space.remove(b)
     action_value = current_length - len(hypothesis_space)
     print("Action value & updated hypothesis space: ")
     return action_value, hypothesis_space
@@ -130,17 +133,20 @@ def medium_unordered_value_function(action_list, outcome_list, hypothesis_space)
                     for j in itertools.permutations(x, i):
                         if len(j) == len(x) and len(x) < len(machine_blocks):
                             a = list(j) + ['AND']
+                            b = list(j) + ['OR']
                             print(a)
                             if a in hypothesis_space:
                                 hypothesis_space.remove(a)
+                            if b in hypothesis_space:
+                                hypothesis_space.remove(b)
                         elif len(j) == len(x) and len(x) == len(machine_blocks):
                             a = list(j) + ['AND']
                             b = list(j) + ['OR']
                             print(a,b)
                             if a in hypothesis_space:
-                                hypothesis_space.remove(list(a))
+                                hypothesis_space.remove(a)
                             if b in hypothesis_space:
-                                hypothesis_space.remove(list(b))
+                                hypothesis_space.remove(b)
 
     action_value = current_length - len(hypothesis_space)
     print("Action value & updated hypothesis space: ")
@@ -175,17 +181,20 @@ def most_comlpex_unordered_value_function(action_list, outcome_list, hypothesis_
                     for j in itertools.permutations(x, i):
                         if len(j) == len(x) and len(x) < len(machine_blocks):
                             a = list(j) + ['AND']
-                            print(a)
+                            b = list(j) + ['OR']
+                            print(a,b)
                             if a in hypothesis_space:
                                 hypothesis_space.remove(a)
+                            if b in hypothesis_space:
+                                hypothesis_space.remove(b)
                         elif len(j) == len(x) and len(x) == len(machine_blocks):
                             a = list(j) + ['AND']
                             b = list(j) + ['OR']
                             print(a,b)
                             if a in hypothesis_space:
-                                hypothesis_space.remove(list(a))
+                                hypothesis_space.remove(a)
                             if b in hypothesis_space:
-                                hypothesis_space.remove(list(b))
+                                hypothesis_space.remove(b)
         elif y == 'ON':
             if len(x) > 1:
                 print('delete blocks smaller than: ')
@@ -201,9 +210,9 @@ def most_comlpex_unordered_value_function(action_list, outcome_list, hypothesis_
                                     b = list(j) + ['OR']
                                     print(a,b)
                                     if a in hypothesis_space:
-                                        hypothesis_space.remove(list(a))
+                                        hypothesis_space.remove(a)
                                     if b in hypothesis_space:
-                                        hypothesis_space.remove(list(b))
+                                        hypothesis_space.remove(b)
     action_value = current_length - len(hypothesis_space)
     print("Action value & updated hypothesis space: ")
     return action_value, hypothesis_space
