@@ -1,13 +1,18 @@
 # Curse-of-Knowledge-m
+# File index
 
-HypothesisGenerators.py: all 5 hypothesis generators (Ordered AND, ordered AND && OR, Unordered AND, Unordered OR, Unordered AND && OR)
+# ActionSpaceGenerator.py – Generates the list of actions a teacher could take (e.g., just an ordered list of hypotheses)
 
-HypothesisTester.py: tests to see if hypothesis generators are working as planned
+# ActionValueGenerators.py - functions to produce the 3 types of action values we spoke about (simple, medium, complex). 
 
-ActionSpaceGenerator.py – Generates the list of actions a teacher could take (e.g., just an ordered list of hypotheses)
+# ActionValueTESTER.py - tests the Action Value Generators
 
-ActionValueFunctions.py - functions to produce the 3 types of action values we spoke about (simple, medium, complex). 
+# HypothesisGenerators.py: all 5 hypothesis generators (Ordered AND, ordered AND && OR, Unordered AND, Unordered OR, Unordered AND && OR)
 
-ActionValueTester.py - tests the Action Value Functions
+# HypothesisGeneratorTESTER.py: tests to see if hypothesis generators are working as planned
 
+# OutcomeGenerator: given the "rule" that activates the machine & a series of actions, returns whether the machine is "ON" or "OFF" for                       each action
 
+# OutcomeGeneratorTESTER1: One way to test the outcome generator
+
+# OutcomeGeneratorTESTER2: More comprehensive (but computationally costly) way to test the outcome generator
