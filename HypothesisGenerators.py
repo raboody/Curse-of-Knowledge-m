@@ -14,7 +14,7 @@ def ordered_AND(block_list):
     for i in range(0, len(block_list)+1):
         for j in itertools.combinations(block_list, i):
             if len(j) <= 1:
-                hypothesis_space.append(list(j))
+                hypothesis_space.append(list(j) + ['ANDOR'])
             elif len(j) > 1:
                 hypothesis_space.append(list(j) + ['AND'])
     return hypothesis_space
@@ -29,7 +29,7 @@ def ordered_AND_OR(block_list):
     for i in range(0, len(block_list)+1):
         for j in itertools.combinations(block_list, i):
             if len(j) <= 1:
-                hypothesis_space.append(list(j))
+                hypothesis_space.append(list(j) + ['ANDOR'])
             elif len(j) > 1:
                 x = list(j) + ['AND']
                 y = list(j) + ['OR']

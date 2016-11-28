@@ -6,6 +6,11 @@ from ActionSpaceGenerator import *
 # Simple value function for ordered lists
 # for both ordered AND, ordered AND && OR
 
+
+# give me a set of blocks
+# if a block (or set) of blocks doesn't turn the machine on, remove it
+# if it activates the machine, do nothing
+
 def simple_ordered_value_function(action_list, outcome_list, hypothesis_space):
     print("Action list is: ")
     print(action_list)
