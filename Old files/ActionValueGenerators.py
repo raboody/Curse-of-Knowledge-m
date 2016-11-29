@@ -1,6 +1,8 @@
 import itertools
 from HypothesisGenerators import *
 from ActionSpaceGenerator import *
+from OutcomeGenerator import *
+
 
 
 # Simple value function for ordered lists
@@ -11,7 +13,7 @@ from ActionSpaceGenerator import *
 # if a block (or set) of blocks doesn't turn the machine on, remove it
 # if it activates the machine, do nothing
 
-def simple_ordered_value_function(action_list, outcome_list, hypothesis_space):
+def OrderedValueFunction1(action_list, outcome_list, hypothesis_space):
     print("Action list is: ")
     print(action_list)
     print("Outcome list is: ")
@@ -42,7 +44,7 @@ def simple_ordered_value_function(action_list, outcome_list, hypothesis_space):
 # Simple value function for ordered & unordered lists
 # works for any of our 5 hypothesis spaces
 
-def simple_unordered_value_function(action_list, outcome_list, hypothesis_space):
+def UnorderedValueFunction1(action_list, outcome_list, hypothesis_space):
     print("Action list is: ")
     print(action_list)
     print("Outcome list is: ")
@@ -75,9 +77,11 @@ def simple_unordered_value_function(action_list, outcome_list, hypothesis_space)
 
 
 # Medium value function for ordered lists
+# Given a hypothesis space & actions, checks if hypothesis is consistent with the
+# observed action & outcome
 # for both ordered AND, ordered AND && OR
 
-def medium_ordered_value_function(action_list, outcome_list, hypothesis_space):
+def OrderedValueFunction2(action_list, outcome_list, hypothesis_space):
     print("Action list is: ")
     print(action_list)
     print("Outcome list is: ")
@@ -117,7 +121,7 @@ def medium_ordered_value_function(action_list, outcome_list, hypothesis_space):
 # Medium value function for ordered & unordered lists
 # works for any of our 5 hypothesis spaces
 
-def medium_unordered_value_function(action_list, outcome_list, hypothesis_space):
+def UnorderedValueFunction2(action_list, outcome_list, hypothesis_space):
     print("Action list is: ")
     print(action_list)
     print("Outcome list is: ")
@@ -162,9 +166,11 @@ def medium_unordered_value_function(action_list, outcome_list, hypothesis_space)
 
 
 # Most complex value function for ordered & unordered lists
+# Same as above models, but also deletes hypotheses less complex than the
+# simplest set of blocks that succeeds in turning the machine on. 
 # works for any of our 5 hypothesis spaces
 
-def most_comlpex_unordered_value_function(action_list, outcome_list, hypothesis_space):
+def UnorderedValueFunction3(action_list, outcome_list, hypothesis_space):
     print("Action list is: ")
     print(action_list)
     print("Outcome list is: ")

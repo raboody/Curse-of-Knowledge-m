@@ -2,11 +2,12 @@
 # given a true hypothesis and an action, generates the expected outcome
 # (e.g., machine "ON" or "OFF")
 
-def GetOutcome(TrueHypothesis, action):
+def GetOutcome(TrueHypothesis, action, verbose):
     counter1 = 0
     counter2 = 0
-    print("True hypothesis is: ", "{}".format(TrueHypothesis))
-    print("action is: ", "{}".format(action))
+    if verbose == 1:
+        print("True hypothesis is: ", "{}".format(TrueHypothesis))
+        print("action is: ", "{}".format(action))
     for j in TrueHypothesis:
         for i in action:
             # if the hypothesis is just 1 letter, just check if that letter is in the action
@@ -31,8 +32,12 @@ def GetOutcome(TrueHypothesis, action):
     #print("counter 1 is: ", "{}".format(counter1)) #for debugging
     #print("counter 2 is: ", "{}".format(counter2)) #for debugging
     if counter1 > 0 or (counter2 == (len(TrueHypothesis) - 1) and len(TrueHypothesis) > 2):
+        if verbose == 1:
+            print("Outcome is: ")
         return "ON"
     else:
+        if verbose == 1:
+            print("Outcome is: ")
         return "OFF"
 
 

@@ -1,44 +1,33 @@
 import itertools
 from HypothesisGenerators import *
 from ActionSpaceGenerator import *
-from ActionValueFunctions import *
+from OutcomeGenerator import *
+from ActionValueGenerator import *
 
 
-# Testing our value functions on a list of size 3
-
-test_1 = ['ON', 'OFF', 'OFF', 'ON', 'OFF', 'ON', 'ON', 'ON']
-test_2 = ['ON', 'OFF', 'OFF', 'ON', 'OFF', 'ON', 'OFF', 'ON']
-test_3 = ['ON', 'ON', 'OFF', 'ON', 'OFF', 'ON', 'OFF', 'OFF']
-test_4 = ['OFF', 'OFF', 'OFF', 'OFF', 'OFF', 'OFF', 'OFF', 'ON']
-
-
-# Testing our value functions on a list of size 4:
-
-#COMING SOON...
-
-
-
-# value function names:
-    # simple_ordered_value_function
-    # simple_unordered_value_function
-    # medium_ordered_value_function
-    # medium_unordered_value_function
-    # most_comlpex_unordered_value_function
-
-# hypothesis space generator names:
-    # ordered_AND
-most_comlpex_unordered_value_function    # ordered_AND_OR
-    # unordered_AND
-    # unordered_OR
-    # unordered_AND_OR
-
-
-print(medium_unordered_value_function # here, choose a value function to test
-      (action_space(machine_blocks),
-       test_2,                          # here, choose a test to run
-       unordered_AND(machine_blocks)    # here, choose a hypothesis space generator
-      ))
+Hypothesis0 = Action0 = []
+Hypothesis1 = Action1 = ['A']
+Hypothesis2 = Action2 = ['B']
+Hypothesis3 = Action3 = ['C']
+Hypothesis4 = Action4 = ['A', 'B']
+Hypothesis5 = Action5 = ['A', 'C']
+Hypothesis6 = Action6 = ['B', 'C']
+Hypothesis7 = Action7 = ['A', 'B', 'C']
 
 
 
+
+print(GetOutcome(Hypothesis1, Action2, 1))
+print("Our hypothesis space is: ", "{}".format(ordered_AND_OR(machine_blocks)))
+print("###############")
+
+
+
+print(ValueFunction(
+    Action2,                                # action
+    GetOutcome(Hypothesis1, Action2, 0),    # outcome
+    Hypothesis1,                            # true hypothesis
+    ordered_AND_OR(machine_blocks),         # hypothesis space
+    1                                       # verbose (0 = off, 1 = on)
+    ))
 

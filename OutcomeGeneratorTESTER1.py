@@ -17,5 +17,7 @@ Action5 = ['A', 'B', 'C']
 print("action space is: ", "{}".format(action_space(machine_blocks)))
 print("hypothesis space is: ", "{}".format(ordered_AND_OR(machine_blocks)))
 print(GetOutcome(
-    Hypothesis3,    # here choose a hypothesis
-    Action5))       # here choose an action
+    Hypothesis1,    # here choose a hypothesis
+    Action3,       # here choose an action
+    0               # verbose, 0 = off, 1 = on
+      ))       
