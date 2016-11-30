@@ -67,7 +67,7 @@ def GetActionSpaceValue(action_space, true_hypothesis, hypothesis_space, verbose
     else:
         best_exemplar = actions[index_counter1]
     
-    print(actions[0])
+
     return actions, values, best_exemplar
     
     # return function for debugging: return actions, values, index_counter1, largest_value, largest_value_index_list, best_exemplar
