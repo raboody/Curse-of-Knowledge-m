@@ -2,6 +2,11 @@
 # given a true hypothesis and an action, generates the expected outcome
 # (e.g., machine "ON" or "OFF")
 
+
+# add some comments saying that TrueHypothesis will just be 1
+# but it supports taking multiple hypotheses and will give you back all the outcomes
+# for each one
+
 def GetOutcome(TrueHypothesis, action, verbose):
     counter1 = 0
     counter2 = 0
@@ -16,6 +21,7 @@ def GetOutcome(TrueHypothesis, action, verbose):
             if len(TrueHypothesis) <=2:
                 if j == i:
                     counter1 += 1
+            
             else:
                 # if it's an OR hypothesis, check if 1 or more of the letters is in the action
                 # if 1 or more is, machine should turn ON; if not, should remain OFF

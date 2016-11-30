@@ -1,6 +1,6 @@
+from action_space import *
 from HypothesisGenerators import *
-from ActionSpaceGenerator import *
-from OutcomeGenerator import *
+from GetOutcome import *
 
 
 # for every action I see (takes 1 action at a time): which hypotheses are consistent with
@@ -28,3 +28,6 @@ def ValueFunction(action, outcome, true_hypothesis, hypothesis_space, verbose):
     action_value = current_length - len(updated_hypothesis_space)
     return action_value, updated_hypothesis_space
         
+# Add "outcome" as something INSIDE the function, instead of as an arugment
+# arugments should only be info that the function can't compute by itself (even
+# by calling other functions on it)

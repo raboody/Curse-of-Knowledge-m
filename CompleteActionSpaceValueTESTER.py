@@ -1,7 +1,6 @@
 from CompleteActionSpaceValue import *
 
 
-
 Hypothesis0 = Action0 = []
 Hypothesis1 = Action1 = ['A']
 Hypothesis2 = Action2 = ['B']
@@ -17,6 +16,8 @@ print(GetActionSpaceValue(
     action_space(machine_blocks),   # all possible actions (action space)
     Hypothesis4,                    # true hypothesis (from ActionValueTESTER)
     ordered_AND_OR(machine_blocks), # hypothesis space (all possible hypotheses)
-    1                               # verbose (0 = off, 1 = on)
+    0                               # verbose (0 = off, 1 = on)
     ))
     
+
+

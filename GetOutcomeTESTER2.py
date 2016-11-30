@@ -1,7 +1,7 @@
-from OutcomeGenerator import *
+from GetOutcome import *
 from HypothesisGenerators import *
-from ActionSpaceGenerator import *
-#from OutcomeGeneratorTESTER1 import *
+from action_space import *
+
 
 blocks = ['A', 'B', 'C', 'D']
 

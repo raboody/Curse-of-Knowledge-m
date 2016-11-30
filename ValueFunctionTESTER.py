@@ -1,8 +1,7 @@
-import itertools
+from action_space import *
 from HypothesisGenerators import *
-from ActionSpaceGenerator import *
-from OutcomeGenerator import *
-from ActionValueGenerator import *
+from GetOutcome import *
+from ValueFunction import *
 
 
 Hypothesis0 = Action0 = []
@@ -28,6 +27,6 @@ print(ValueFunction(
     GetOutcome(Hypothesis1, Action2, 0),    # outcome
     Hypothesis1,                            # true hypothesis
     ordered_AND_OR(machine_blocks),         # hypothesis space
-    1                                       # verbose (0 = off, 1 = on)
+    0                                       # verbose (0 = off, 1 = on)
     ))
 

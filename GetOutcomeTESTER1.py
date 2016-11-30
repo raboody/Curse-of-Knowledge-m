@@ -1,6 +1,6 @@
-from OutcomeGenerator import *
+from GetOutcome import *
 from HypothesisGenerators import *
-from ActionSpaceGenerator import *
+from action_space import *
 
 Hypothesis1 = ['C', 'ANDOR']
 Hypothesis2 = ['A', 'C', 'OR']

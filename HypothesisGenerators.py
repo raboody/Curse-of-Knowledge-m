@@ -1,9 +1,10 @@
-# 3 hypothesis space generators
+# 2 types of hypothesis space generators
+# ordered (combinations) & unordered (permutations)
 # use "itertools" to produce combinations & permutations of lists
 
 import itertools
 
-machine_blocks = ['A', 'B', 'C'] # available blocks
+# machine_blocks = ['A', 'B', 'C'] # available blocks
 
 
 # 1. Ordered hypothesis list generators (combination):
@@ -13,10 +14,12 @@ def ordered_AND(block_list):
     hypothesis_space = []
     for i in range(0, len(block_list)+1):
         for j in itertools.combinations(block_list, i):
-            if len(j) <= 1:
+            if len(j) == 1:
                 hypothesis_space.append(list(j) + ['ANDOR'])
             elif len(j) > 1:
                 hypothesis_space.append(list(j) + ['AND'])
+            else:
+                hypothesis_space.append(list(j))
     return hypothesis_space
 
 #print(ordered_AND(machine_blocks))
@@ -28,13 +31,21 @@ def ordered_AND_OR(block_list):
     hypothesis_space = []
     for i in range(0, len(block_list)+1):
         for j in itertools.combinations(block_list, i):
-            if len(j) <= 1:
-                hypothesis_space.append(list(j))
+
+            # for single blocks (e.g., A, B, C, etc.)
+            if len(j) == 1:
+                hypothesis_space.append(list(j) + ['ANDOR'])
+
+            # for more than 1 block (e.g., ['A', 'B'] etc.)
             elif len(j) > 1:
                 x = list(j) + ['AND']
                 y = list(j) + ['OR']
                 hypothesis_space.append(x)
                 hypothesis_space.append(y)
+
+            # for empty hypothesis spaces (e.g., [])
+            else:
+                hypothesis_space.append(list(j))
     return hypothesis_space
     
 #print(ordered_AND_OR(machine_blocks))
@@ -46,10 +57,12 @@ def unordered_AND(block_list):
     hypothesis_space = []
     for i in range(0, len(block_list)+1):
         for j in itertools.permutations(block_list, i):
-            if len(j) <= 1:
-                hypothesis_space.append(list(j))
+            if len(j) == 1:
+                hypothesis_space.append(list(j) + ['ANDOR'])
             elif len(j) > 1:
                 hypothesis_space.append(list(j) + ['AND'])
+            else:
+                hypothesis_space.append(list(j))
     return hypothesis_space
 
 
@@ -61,10 +74,12 @@ def unordered_OR(block_list):
     hypothesis_space = []
     for i in range(0, len(block_list)+1):
         for j in itertools.permutations(block_list, i):
-            if len(j) <= 1:
-                hypothesis_space.append(list(j))
+            if len(j) == 1:
+                hypothesis_space.append(list(j) + ['ANDOR'])
             elif len(j) > 1:
                 hypothesis_space.append(list(j) + ['OR'])
+            else:
+                hypothesis_space.append(list(j))
     return hypothesis_space
 
 
@@ -74,17 +89,18 @@ def unordered_AND_OR(block_list):
     hypothesis_space = []
     for i in range(0, len(block_list)+1):
         for j in itertools.permutations(block_list, i):
-            if len(j) <= 1:
-                hypothesis_space.append(list(j))
+            if len(j) == 1:
+                hypothesis_space.append(list(j) + ['ANDOR'])
             elif len(j) > 1:
                 x = list(j) + ['AND']
                 y = list(j) + ['OR']
                 hypothesis_space.append(x)
                 hypothesis_space.append(y)
+            else:
+                hypothesis_space.append(list(j))
     return hypothesis_space
 
 
-#print(len(Unordered_AND_OR(machine_blocks)))
 
 
 
