@@ -4,8 +4,6 @@
 
 import itertools
 
-# machine_blocks = ['A', 'B', 'C'] # available blocks
-
 
 # 1. Ordered hypothesis list generators (combination):
 # 1A: Ordered list + AND
@@ -22,7 +20,6 @@ def ordered_AND(block_list):
                 hypothesis_space.append(list(j))
     return hypothesis_space
 
-#print(ordered_AND(machine_blocks))
 
 
 # 1B: Ordered list + AND && OR
@@ -48,7 +45,7 @@ def ordered_AND_OR(block_list):
                 hypothesis_space.append(list(j))
     return hypothesis_space
     
-#print(ordered_AND_OR(machine_blocks))
+
 
 # 2. Unordered hypothesis list generators (permutations)
 # 2A. Unordered list + AND

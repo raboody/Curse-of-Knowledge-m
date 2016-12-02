@@ -10,14 +10,11 @@ Hypothesis5 = Action5 = ['A', 'C']
 Hypothesis6 = Action6 = ['B', 'C']
 Hypothesis7 = Action7 = ['A', 'B', 'C']
 
-
+machine_blocks = ['A', 'B', 'C', 'D', 'E'] 
 
 print(GetActionSpaceValue(
     action_space(machine_blocks),   # all possible actions (action space)
-    Hypothesis4,                    # true hypothesis (from ActionValueTESTER)
-    ordered_AND_OR(machine_blocks), # hypothesis space (all possible hypotheses)
+    ['B', 'E', 'AND'],                    # true hypothesis (from ActionValueTESTER)
+    unordered_OR(machine_blocks), # hypothesis space (all possible hypotheses)
     0                               # verbose (0 = off, 1 = on)
     ))
-    
-
-

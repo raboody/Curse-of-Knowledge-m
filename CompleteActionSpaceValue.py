@@ -43,9 +43,12 @@ def GetActionSpaceValue(action_space, true_hypothesis, hypothesis_space, verbose
 
     # Finds the largest action value (best action to perform for this hypothesis space)
     for value in values:
-        if largest_value < value:
+        if largest_value <= value:
             largest_value = value
             index_counter1 += 1
+    #print("largest value:", largest_value)
+    #print('index counter 1 is:', index_counter1)
+    #print("block to show is:", values[index_counter1])
 
     # Now checks to see how many actions produce that value
     for value in values:

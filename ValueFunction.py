@@ -9,6 +9,9 @@ from GetOutcome import *
 def ValueFunction(action, outcome, true_hypothesis, hypothesis_space, verbose):
     current_length = len(hypothesis_space)
     updated_hypothesis_space = []
+    #print("True Hypothesis is: ", true_hypothesis)
+    #print("Our hypothesis space is: ", hypothesis_space)
+    
     for hypothesis in hypothesis_space:
         
         ExpectedOutcome = GetOutcome(hypothesis, action, 0)
@@ -22,6 +25,7 @@ def ValueFunction(action, outcome, true_hypothesis, hypothesis_space, verbose):
         
         if ExpectedOutcome == ActualOutcome:
             updated_hypothesis_space.append(hypothesis)
+        
             if verbose == 1:
                 print("Updated hypothesis space is: ", "{}".format(updated_hypothesis_space))
                 print("")

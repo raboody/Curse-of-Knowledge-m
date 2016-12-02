@@ -8,8 +8,6 @@
 
 import itertools
 
-machine_blocks = ['A', 'B', 'C']
-
 
 def action_space(block_list):
     hypothesis_space = []

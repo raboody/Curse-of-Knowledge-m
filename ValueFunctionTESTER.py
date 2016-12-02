@@ -5,28 +5,28 @@ from ValueFunction import *
 
 
 Hypothesis0 = Action0 = []
-Hypothesis1 = Action1 = ['A']
-Hypothesis2 = Action2 = ['B']
-Hypothesis3 = Action3 = ['C']
-Hypothesis4 = Action4 = ['A', 'B']
+Hypothesis1 = Action1 = ['A', 'ANDOR']
+Hypothesis2 = Action2 = ['B', 'ANDOR']
+Hypothesis3 = Action3 = ['C', 'ANDOR']
+Hypothesis4 = Action4 = ['A', 'B', 'AND']
+Hypothesis4_1 = Action4_1 = ['A', 'B', 'OR']
+
+                               
 Hypothesis5 = Action5 = ['A', 'C']
 Hypothesis6 = Action6 = ['B', 'C']
 Hypothesis7 = Action7 = ['A', 'B', 'C']
 
 
+hypothesis_space = [[], ['B', 'ANDOR'], ['A', 'B', 'AND'], ['B', 'C', 'AND'], ['A', 'B', 'C', 'AND']]
 
-
-print(GetOutcome(Hypothesis1, Action2, 1))
-print("Our hypothesis space is: ", "{}".format(ordered_AND_OR(machine_blocks)))
-print("###############")
-
+machine_blocks = ['A', 'B', 'C', 'D', 'E']
 
 
 print(ValueFunction(
-    Action2,                                # action
-    GetOutcome(Hypothesis1, Action2, 0),    # outcome
-    Hypothesis1,                            # true hypothesis
-    ordered_AND_OR(machine_blocks),         # hypothesis space
+    ['B', 'E'],           # action
+    GetOutcome(['B', 'E', 'AND'], ['B', 'E'] ,0),    # outcome
+    ['B', 'E', 'AND'],                      # true hypothesis
+    unordered_AND_OR(machine_blocks),       # hypothesis space
     0                                       # verbose (0 = off, 1 = on)
     ))
 

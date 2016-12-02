@@ -3,7 +3,7 @@ from HypothesisGenerators import *
 from action_space import *
 
 
-blocks = ['A', 'B', 'C', 'D']
+blocks = ['A', 'B', 'C', 'D', 'E']
 
 def Tester(Hypotheses, Actions):
     for hypothesis in Hypotheses:

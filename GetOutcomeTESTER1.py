@@ -12,7 +12,7 @@ Action3 = ['A']
 Action4 = ['A', 'C']
 Action5 = ['A', 'B', 'C']
 
-
+machine_blocks = ['A', 'B', 'C']
 
 print("action space is: ", "{}".format(action_space(machine_blocks)))
 print("hypothesis space is: ", "{}".format(ordered_AND_OR(machine_blocks)))
