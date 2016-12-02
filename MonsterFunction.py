@@ -14,7 +14,7 @@ def MonsterFunction(action_space, true_hypothesis, hypothesis_space, verbose):
 
     total_hypothesis_space_size = len(hypothesis_space)
 
-    updated_hypothesis_space = hypothesis_space
+-    updated_hypothesis_space = hypothesis_space
     #print("starting action space:", action_space)
     #print("starting hypothesis space:", hypothesis_space)
 
