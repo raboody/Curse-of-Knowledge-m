@@ -1,4 +1,5 @@
-import random 
+import random
+#import xlsxwriter
 from action_space import *
 from HypothesisGenerators import *
 from GetOutcome import *
@@ -11,12 +12,8 @@ from IsPermutation import *
 def MonsterFunction(action_space, true_hypothesis, hypothesis_space, verbose):
     block_list = []
     block_value = []
-
     total_hypothesis_space_size = len(hypothesis_space)
-
--    updated_hypothesis_space = hypothesis_space
-    #print("starting action space:", action_space)
-    #print("starting hypothesis space:", hypothesis_space)
+    updated_hypothesis_space = hypothesis_space
 
     while len(updated_hypothesis_space) > 1 and IsPermutation(updated_hypothesis_space) != True:
         block_to_show = GetActionSpaceValue(action_space,

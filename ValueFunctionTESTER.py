@@ -27,6 +27,6 @@ print(ValueFunction(
     GetOutcome(['B', 'E', 'AND'], ['B', 'E'] ,0),    # outcome
     ['B', 'E', 'AND'],                      # true hypothesis
     unordered_AND_OR(machine_blocks),       # hypothesis space
-    0                                       # verbose (0 = off, 1 = on)
+    1                                       # verbose (0 = off, 1 = on)
     ))
 
