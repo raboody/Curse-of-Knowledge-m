@@ -15,7 +15,7 @@
 
 # GetOutcomeTESTER1.py: Tests the generator with 1 True Hypothesis and 1 action
 
-# GetOutcomeTESTER2.py: Tests the generator with a hypothesis space & action space of arbitrary size
+# GetOutcomeTESTER2.py: Tests the generator with a hypothesis space & action space of arbitrary size. The function assumes that each hypothesis provided is the "TrueHypothesis" in turn (that is, goes through all actions with a TrueHypothesis if [], of ['A', 'ANDOR'], etc.)
 
 # GetoutcomeTESTER3_csv.py: Takes what is basically the output of GetOutcomeTESTER2, but stores it in GetOutcome.csv for easier review.
 
