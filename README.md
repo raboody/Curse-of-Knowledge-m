@@ -20,9 +20,12 @@
 # GetoutcomeTESTER3_csv.py: Takes what is basically the output of GetOutcomeTESTER2, but stores it in GetOutcome.csv for easier review.
 
 
-# ValueFunction.py - functions to produce the 3 types of action values we spoke about (simple, medium, complex). 
+# ValueFunction.py - Figures out how many hypotheses an action would delete, given the true hypothesis. Sums up the number of hypotheses it deletes to produce an "action value" 
 
-# ActionValueTESTER.py - tests the Action Value Generators
+# ValueFunctionTESTER.py - tests the ValueFunction given an action, a true hypothesis, and a hypothesis space
+
+# ValueFunctionTESTER2_csv.py - outputs ValueFunction to a csv (includes the true hypothesis, current hypothesis, current action, expected outcome, and the actual outcome)
+
 
 # CompleteActionSpaceValue.py - Uses the Action Value Generator to generate action values for not just 1 action, but a series of actions                        (e.g., what we'd actually see from teacher data)
 
