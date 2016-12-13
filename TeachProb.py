@@ -32,7 +32,6 @@ def TeachProb(actions, action_space, true_hypothesis, hypothesis_space, Tau, ver
         if verbose == 1:
             print("allActions: ", allActions)
             print("softmaxValue: ", softmaxValues)
-            print("softmaxValue sum: ", sum(softmaxValues))
             print("probability of our action: ", actionProb)
             print("updated hypothesis space: ", hypothesis_space)
              
