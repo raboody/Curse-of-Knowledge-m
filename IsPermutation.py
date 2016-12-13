@@ -1,11 +1,22 @@
+######################
+
+# For unordered spaces, sometimes multiple hypotheses are left that are all just
+# permutations of one another (e.g., ['B', 'E', 'AND'], ['E', 'B', 'AND'])
+# In this case, both of these hypotheses are correct due to our current True Hypothesis
+# So we use IsPermutation to check whether all remaining hypotheses are just permutations of one another
+# If they are, the function stops (since if they ARE all just permutations of one another, they are ALL true)
+
+# FUNCTION 6 OF __
+
+######################
+
 import random
 import itertools
 from action_space import *
 from HypothesisGenerators import *
 from GetOutcome import *
 from ValueFunction import *
-from CompleteActionSpaceValue import *
-from ActionSpaceUpdater import *
+from ChooseBestAction import *
 
 
 def IsPermutation(hypothesis_space):
@@ -29,18 +40,12 @@ def IsPermutation(hypothesis_space):
                     comparison_hypotheses.append(list(j) + operator)
 
 
-        if hypothesis_space == comparison_hypotheses:
-            return True
-        else:
-            return False
-
-                
-    #return comparison_hypotheses
-    
-#    for hypothesis in hypothesis_space:
+    if hypothesis_space == comparison_hypotheses:
+        return True
+    else:
+        return False
 
 
 
 
-print(IsPermutation([['B', 'E', 'AND'], ['E', 'B', 'AND']]))
         

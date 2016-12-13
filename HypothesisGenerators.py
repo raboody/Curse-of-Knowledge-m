@@ -1,6 +1,12 @@
+######################
+
 # 2 types of hypothesis space generators
 # ordered (combinations) & unordered (permutations)
 # use "itertools" to produce combinations & permutations of lists
+
+# FUNCTION 2 OF __
+
+######################
 
 import itertools
 

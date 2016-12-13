@@ -23,10 +23,10 @@ machine_blocks = ['A', 'B', 'C', 'D', 'E']
 
 
 print(ValueFunction(
-    ['B', 'E'],           # action
-    GetOutcome(['B', 'E', 'AND'], ['B', 'E'] ,0),    # outcome
-    ['B', 'E', 'AND'],                      # true hypothesis
-    unordered_AND_OR(machine_blocks),       # hypothesis space
-    1                                       # verbose (0 = off, 1 = on)
+    ['B', 'E'],     # action
+    ['B', 'E', 'AND'],  # true hypothesis
+    ordered_AND(machine_blocks),    # hypothesis space
+    0,   # verbose (0 = off, 1 = on)
+    0   # verbose2 (0 = off, 1 = on)
     ))
 

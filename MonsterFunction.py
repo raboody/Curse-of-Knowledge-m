@@ -1,5 +1,12 @@
+#####################
+
+
+# FUNCTION 7 OF __
+
+#####################
+
+
 import random
-#import xlsxwriter
 from action_space import *
 from HypothesisGenerators import *
 from GetOutcome import *
@@ -19,7 +26,8 @@ def MonsterFunction(action_space, true_hypothesis, hypothesis_space, verbose):
         block_to_show = GetActionSpaceValue(action_space,
                                             true_hypothesis,
                                             updated_hypothesis_space,
-                                            0
+                                            0,
+                                            1
                                             )[2]
         if verbose == 1:
             print("block we showed:", block_to_show)
@@ -27,23 +35,24 @@ def MonsterFunction(action_space, true_hypothesis, hypothesis_space, verbose):
                                                             action_space,
                                                             true_hypothesis,
                                                             updated_hypothesis_space,
+                                                            0,
                                                             0
                                                             )[1])                      
         
-        action_value, updated_hypothesis_space = ValueFunction(block_to_show,
-                                             GetOutcome(true_hypothesis, block_to_show, 0),
-                                             true_hypothesis,
-                                             updated_hypothesis_space,
-                                             0
+        action_value, updated_hypothesis_space = ValueFunction(block_to_show, # action
+                                             GetOutcome(true_hypothesis, block_to_show, 0), # outcome
+                                             true_hypothesis,   # true hypothesis
+                                             updated_hypothesis_space, # hypothesis space
+                                             0,
                                              )
 
-        action_space = action_space_updater(action_space, true_hypothesis, updated_hypothesis_space, 0)
+        #action_space = action_space_updater(action_space, true_hypothesis, updated_hypothesis_space, 0)
 
         if verbose == 1:
             
             print("value of the one we showed:", action_value)                                                           
-            print("updated hypothesis space:", updated_hypothesis_space)
-            print("updated action space is", action_space)
+            #print("updated hypothesis space:", updated_hypothesis_space)
+            #print("updated action space is", action_space)
             
     
         block_list.append(block_to_show)

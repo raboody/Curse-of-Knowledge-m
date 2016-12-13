@@ -1,3 +1,10 @@
+######################
+
+# Tests GetOutcome; input is 1 action & 1 true hypothesis
+
+######################
+
+
 from GetOutcome import *
 from HypothesisGenerators import *
 from action_space import *
@@ -14,10 +21,9 @@ Action5 = ['A', 'B', 'C']
 
 machine_blocks = ['A', 'B', 'C']
 
-print("action space is: ", "{}".format(action_space(machine_blocks)))
-print("hypothesis space is: ", "{}".format(ordered_AND_OR(machine_blocks)))
-print(GetOutcome(
-    Hypothesis1,    # here choose a hypothesis
-    Action3,       # here choose an action
-    0               # verbose, 0 = off, 1 = on
-      ))       
+def GetOutcomeTESTER1(TrueHypothesis, action):
+    print("True Hypothesis is: ", TrueHypothesis)
+    print("action is: ", action)
+    print("outcome is: ", GetOutcome(TrueHypothesis, action, 0))
+
+GetOutcomeTESTER1(Hypothesis3, Action1)
