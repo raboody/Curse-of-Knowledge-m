@@ -1,9 +1,10 @@
 # Curse-of-Knowledge-m
 # File index
 
-# 1.
-  # A. action_space.py – Generates the action space (e.g., list of all possible actions given a set of blocks)
-  # B. action_spaceTESTER.py - action_space tester
+1.
+action_space.py – Generates the action space (e.g., list of all possible actions given a set of blocks)
+  
+action_spaceTESTER.py - action_space tester
 
 # 2. 
   # HypothesisGenerators.py: all 5 hypothesis generators (Ordered AND, ordered AND && OR, Unordered AND, Unordered OR, Unordered AND &&                                OR)
