@@ -1,5 +1,10 @@
 #####################
 
+# Given a sequence of teaching actions (e.g., teaching data from our mturk study),
+# produces the probablity of a teacher showing each action
+
+# After each teaching action, updates the hypothesis space given the teacher's action
+
 
 # FUNCTION 9 OF __
 

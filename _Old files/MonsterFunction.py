@@ -11,8 +11,7 @@ from action_space import *
 from HypothesisGenerators import *
 from GetOutcome import *
 from ValueFunction import *
-from CompleteActionSpaceValue import *
-from ActionSpaceUpdater import *
+from ChooseBestAction import *
 from IsPermutation import *
 
 
@@ -61,5 +60,3 @@ def MonsterFunction(action_space, true_hypothesis, hypothesis_space, verbose):
         
         
     return block_list, block_value, total_hypothesis_space_size
-
-

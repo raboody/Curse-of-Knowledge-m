@@ -40,10 +40,10 @@ def IsPermutation(hypothesis_space):
                     comparison_hypotheses.append(list(j) + operator)
 
 
-    if hypothesis_space == comparison_hypotheses:
-        return True
-    else:
-        return False
+        if hypothesis_space == comparison_hypotheses:
+            return True
+        else:
+            return False
 
 
 
