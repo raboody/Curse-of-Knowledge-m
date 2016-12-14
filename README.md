@@ -34,4 +34,10 @@ b) ChooseBestActionTESTER.py - Tests the above function
 
 c) ChooseBestActionTESTER2_csv.py - outputs the results of the ChooseBestAction function to a csv
 
+# 6.
 
+a) IsPermutation.py - For unordered spaces, sometimes multiple hypotheses are left that are all just permutations of one another (e.g.,                         ['B', 'E', 'AND'], ['E', 'B', 'AND']). Given our current True Hypothesis rule, these will all be right. So this                           function figures out when all the remaining hypotheses are just perumtations of one another, so that we can stop                           providing examples.
+
+b) IsPermutationTESTER.py - tests tha above
+
+# 7. 
