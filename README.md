@@ -41,3 +41,17 @@ a) IsPermutation.py - For unordered spaces, sometimes multiple hypotheses are le
 b) IsPermutationTESTER.py - tests tha above
 
 # 7. 
+
+a) BestTeachSequence.py - Applies ChooseBestAction iteratively until there is only 1 hypothesis left. I.e., runs ChooseBestAction, "shows"                           the set of blocks with the highest value, then updates the hypothesis space accordingly, chooses the next block                           to show, etc.
+
+b) BestTeachSequenceTESTER.py - tester for above
+
+# 8.
+
+a) Softmax.py - simple Softmax implementation
+
+# 9. 
+
+a) TeachProb.py - Given a sequence of teaching actions (e.g., teaching data from our mturk study), produces the probablity of a teacher                     showing the actions that they did, updating the hypothesis space accordingly after each block is demonstrated.
+
+b) TeachProbTESTER.py - tester for above
