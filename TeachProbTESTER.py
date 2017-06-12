@@ -5,6 +5,8 @@ from ValueFunction import *
 from ChooseBestAction import *
 from Softmax import *
 from TeachProb import *
+import sys
+sys.path.append("..")
 
 
 machine_blocks = ['A', 'B', 'C', 'D', 'E']
